@@ -17,8 +17,13 @@ const closeModal = function () {
 for (let i = 0; i < btnsOpenModal.length; i++)
   btnsOpenModal[i].addEventListener('click', openModal);
 
+// added event on click of button close
 btnCloseModal.addEventListener('click', closeModal);
+
+// added event on clicking outside the modal
 overlay.addEventListener('click', closeModal);
+
+// added event on clicking the escape key
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Escape' && !modal.classList.contains('hidden'))
     closeModal();
